@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="scanlines" lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  <main>
+  <div class="maincontainer">
+    <div class="col1">
+        {{ block "main" . }}{{ end }}
+
+    </div>
+    <div class="col2">
+      <div class="section">
+          <h2 class="homepageheader" style="margin-left:5%;">
+            Links
+          </h2>
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      </div>
+      
+    </div>
+  </div>
+
+  </main>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

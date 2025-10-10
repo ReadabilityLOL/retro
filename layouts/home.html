@@ -1,0 +1,32 @@
+{{ define "main" }}
+      <div class="section">
+      <h2 class="homepageheader">
+        About me:
+      </h2>
+      {{ .Content }}
+      </div>
+
+      <div class="section">
+      <h2 class="homepageheader">
+        Posts:
+      <a style="float: right; font-size:1.5ch; top:50%; margin:0;" href="{{.Site.BaseURL }}/index.xml">RSS<i class="fa-solid fa-rss"></i></a>
+      </h2>
+
+      {{ range site.RegularPages }}
+      <div>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> — {{ time.Format "Monday, Jan 2, 2006" .Date }}
+      </div>
+      {{ end }}
+      <br>
+      <br>
+      </div>
+
+
+      <!-- Add your own sections!
+      <div class="section">
+      <h1> My Projects: </h1>
+      <img href="https://brainmade.org/88x31-dark.png"></img>
+      </div>
+      -->
+
+{{ end }}
