@@ -13,6 +13,7 @@
       </h2>
 
       {{ range site.RegularPages }}
+
       <div>
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> — {{ time.Format "Monday, Jan 2, 2006" .Date }}
       </div>
