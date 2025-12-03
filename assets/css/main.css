@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body {
-  width: 60%;
+  width: 70%;
   color: white;
   background-color:black;
   line-height: 1.5;
   margin: 1rem;
   max-width: 90%;
-  margin-left:20%;
+  margin-left:15%;
 
   font-family: "Share Tech Mono", monospace;
   font-weight: 400;
   font-style: normal;
+  overflow: auto;
 }
 
 
@@ -19,6 +20,7 @@ header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
 }
+
 
 footer {
   border-top: 1px solid #222;
@@ -49,14 +51,25 @@ a {
 }
 
 .col2{
-  width:20%;
+  min-width:15%;
+  max-width:20%;
+}
+
+.col2 li{
+  margin-left:auto;
+  margin-right:auto;
+
 }
 
 .col2 .section{
   margin-right:0%;
+  padding-left:0%;
 }
 
-.col2 li{
+.col2 h2{
+  text-wrap:wrap;
+  word-break: normal;
+  text-align:center;
 }
 
 .homepageheader{
@@ -71,9 +84,8 @@ img {
 
 /* shamelessly stolen off the internet from https://codepen.io/ynef/pen/yvvyGv */
 
-/*
+/**/
 .scanlines {
-    overflow: hidden;
     position: relative;
 }
 .scanlines:before,
@@ -103,7 +115,7 @@ img {
         rgba(0, 0, 0, 0.3) 51%
     );
     background-size: 100% 4px;
-    animation: scanlines 1s steps(60) infinite;
+    /*animation: scanlines 5s steps(60) infinite;*/
 }
 
 @keyframes scanline {
