@@ -16,6 +16,9 @@ hr{
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
   {{ .Content }}
+  <p>
+  <hr>
+  {{ partial "giscus.html" . }}
   <!--{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}-->
   </div>
 {{ end }}
