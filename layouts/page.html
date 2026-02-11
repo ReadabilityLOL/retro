@@ -18,7 +18,9 @@ hr{
   {{ .Content }}
   <p>
   <hr>
-  {{ partial "giscus.html" . }}
+  {{ if not .Params.nocomments }}
+    {{ partial "giscus.html" . }}
+  {{ end }}
   <!--{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}-->
   </div>
 {{ end }}
