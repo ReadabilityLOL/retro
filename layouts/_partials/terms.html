@@ -6,6 +6,7 @@ For a given taxonomy, renders a list of terms assigned to the page.
 
 @example: {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 */}}
+{{ define "main" }}
 
 {{- $page := .page }}
 {{- $taxonomy := .taxonomy }}
@@ -21,3 +22,4 @@ For a given taxonomy, renders a list of terms assigned to the page.
     </ul>
   </div>
 {{- end }}
+{{ end }}
