@@ -7,6 +7,14 @@
       </div>
 
       <div class="section">
+            <center><h1>Random image</h1></center>
+            <img src="/randimage/{{(index (readDir "/assets/randimage" | shuffle | first 1) 0).Name
+}}">
+      </div>
+
+
+
+      <div class="section">
       <h2 class="homepageheader">
         Posts:
       <a style="float: right; font-size:1.5ch; top:50%; margin:0;" href="{{.Site.BaseURL }}/index.xml">RSS<i class="fa-solid fa-rss"></i></a>
